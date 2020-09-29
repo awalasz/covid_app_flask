@@ -2,7 +2,6 @@
 
 ## About
 
-this app was created for recruiting purposes and is only a demo. 
 The application is fetching data from available for free [COVID 19 API](https://covid19api.com/).
 
 ## Deployment with docker
