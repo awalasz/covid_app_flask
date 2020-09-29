@@ -45,14 +45,14 @@ countries send POST request to url `<host>/tracked` like:
     curl --header "Content-Type: application/json" \
       --request POST \
       --data '{"country_codes": ["DE", "RUS", "NL"]}' \
-      http://localhost/countries/poland/2020-09-09
+      http://localhost/tracked
 
 To remove countries from tracking, use DELETE method to the same endpoint with similar request body:
 
     curl --header "Content-Type: application/json" \
-      --request POST \
-      --data '{"country_codes": ["DE", "RUS", "NL"]}' \
-      http://localhost/countries/poland/2020-09-09
+      --request DELETE \
+      --data '{"country_codes": ["RUS"]}' \
+      http://localhost/tracked
 
 Getting covid data for all tracked countries:
 
