@@ -66,7 +66,7 @@ class TrackSubscribe(Resource):
                 message=f"Countries {not_tracked} are not tracked! No operations were performed.",
             )
         for country in to_delete:
-            tracked = Tracked(alpha2=country.alpha2)
+            tracked = db.session.query(Tracked).filter_by(alpha2=country.alpha2).first()
             db.session.delete(tracked)
             db.session.commit()
         return list(country.alpha2 for country in to_delete), 201
