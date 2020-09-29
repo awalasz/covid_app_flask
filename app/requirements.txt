@@ -1,0 +1,8 @@
+flask
+Flask-RESTful
+Flask-SQLAlchemy
+Flask-Pydantic
+requests
+iso3166
+pydantic
+pytest
